@@ -1,8 +1,5 @@
 package com.company;
 
-/**
- * Created by Sergey on 12/14/2015.
- */
 public class Box {
     double height, width, length;
 
@@ -12,9 +9,9 @@ public class Box {
         this.length = length;
     }
 
-    double volume() {
-        return width * length * height;
-    }
+    double volume() {return width * length * height;}
+
+    protected void finalize() {System.out.println("Goodbye Box");}
 }
 
 class BoxDemo7 {
@@ -30,5 +27,7 @@ class BoxDemo7 {
         vol = mybox2.volume();
         System.out.println(vol);
 
+        mybox1 = null;
+        System.gc();
     }
 }
