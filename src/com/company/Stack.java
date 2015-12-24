@@ -1,13 +1,16 @@
 package com.company;
 
 class Stack {
-    int stck[] = new int[10];
-    int tos;
+    private int stck[];
+    private int tos;
 
-    Stack() {tos = -1;}
+    Stack(int size) {
+        tos = -1;
+        stck = new int[size];
+    }
 
     void push(int item) {
-        if (tos == 9) System.out.println("Stack is full");
+        if (tos == stck.length-1) System.out.println("Stack is full");
         else stck[++tos] = item;}
 
     int pop() {
@@ -17,18 +20,18 @@ class Stack {
 
 class TestStack {
     public static void main(String[] args) {
-        Stack mystack1 = new Stack();
-        Stack mystack2 = new Stack();
+        Stack mystack1 = new Stack(5);
+        Stack mystack2 = new Stack(8);
 
-        for (int i=0; i<10; i++) mystack1.push(i);
-        for (int i=10; i<20; i++) mystack2.push(i);
+        for (int i=0; i<5; i++) mystack1.push(i);
+        for (int i=0; i<8; i++) mystack2.push(i);
 
         System.out.println("Stack 1 contains:");
-        for (int i=0; i<10; i++)
-        System.out.print(mystack1.pop());
+        for (int i=0; i<5; i++)
+        System.out.print(mystack1.pop() + " ");
 
-        System.out.println("Stack 2 contains:");
-        for (int i=0; i<10; i++)
-        System.out.println(mystack2.pop());
+        System.out.println('\n' + "Stack 2 contains:");
+        for (int i=0; i<8; i++)
+        System.out.print(mystack2.pop() + " ");
     }
 }
