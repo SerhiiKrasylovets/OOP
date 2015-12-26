@@ -8,7 +8,7 @@ public class Main {
         s[1] = new Rectangle("yellow",10,10,50,50);
         s[2] = new Circle(10,10,5,"green");
 
-        for (int i = 0; i<s.length;i++) s[1].draw();
+        for (int i = 0; i<s.length;i++) s[i].draw();
     }
 
 }
