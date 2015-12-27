@@ -1,14 +1,17 @@
 package com.company;
-import com.company.Shape;
 
-public class Main {
+public class Main implements MyInterface{
     public static void main(String[] args) {
-        Shape s[] = new Shape[3];
-        s[0] = new Circle(10,10,5,"black");
-        s[1] = new Rectangle("yellow",10,10,50,50);
-        s[2] = new Circle(10,10,5,"green");
 
-        for (int i = 0; i<s.length;i++) s[i].draw();
+        Enum_in_interface s = Enum_in_interface.C;
+        System.out.println("Enum from interface" + s);
+
+        MyInterface.static_method_in_interface();
+
+        MyInterface g = new Main();
+        g.default_method_in_interface();
+
+        Class_in_interface f = new Class_in_interface();
+        f.print();
     }
-
 }
