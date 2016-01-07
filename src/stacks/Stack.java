@@ -1,4 +1,4 @@
-package com.company;
+package stacks;
 
 class Stack {
     private int stck[];
