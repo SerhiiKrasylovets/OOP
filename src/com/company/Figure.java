@@ -12,8 +12,8 @@ abstract class Figure {
     abstract double area();
 }
 
-class Rectangle extends Figure{
-    Rectangle (double a, double b){
+class Rectangle1 extends Figure{
+    Rectangle1 (double a, double b){
         super(a,b);
     }
 
@@ -36,7 +36,7 @@ class Triangle extends Figure{
 
 class FindAreas {
     public static void main(String[] args) {
-        Rectangle r = new Rectangle(9,5);
+        Rectangle1 r = new Rectangle1(9,5);
         Triangle t = new Triangle(10,8);
         Figure figref;
 
