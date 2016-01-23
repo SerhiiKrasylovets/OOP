@@ -18,6 +18,7 @@ package generics;
             int v = iOb.getOb();
             System.out.println("value is: " + v);
             System.out.println();
+            //System.out.println(iOb.getClass());
 
             Gen<String> strOb = new Gen<String>("Generics Test");
             strOb.showType();
