@@ -1,6 +1,8 @@
 /*провести исследование - ArrayList и LinkedList добавить/удалить в начало, средину, конец, засечь время,
     добавить множество элементов (от 500)
-    засечь время методом System.nanoTime()*/
+    засечь время методом System.nanoTime()*
+    https://docs.google.com/spreadsheets/d/1l2gdPrPVEW0p2imoTr5KCFn9l50VECpzZYNnpTuP_Kw/edit#gid=0
+    */
 
 package collections;
 import java.util.*;
@@ -9,7 +11,7 @@ public class HomeTaskCollections {
 
     public static void main(String[] args) {
         Random rand = new Random();
-        int value = 1000000, iter = 100;
+        int value = 1000000, iter = 200000;
 
         ArrayList<Object> al = new ArrayList<>();
         LinkedList<Object> ll = new LinkedList<>();
