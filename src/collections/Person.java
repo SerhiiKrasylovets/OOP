@@ -1,22 +1,23 @@
 package collections;
 
-public class Person{
-    private String FirstName, LastName;
+public class Person implements Comparable{
+    private String firstName, lastName;
     private int age;
+
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public int getAge() {
@@ -26,9 +27,9 @@ public class Person{
     public void setAge(int age) {
         this.age = age;
     }
-    /*public int compareTo(Object anotherPerson) throws ClassCastException {if (!(anotherPerson instanceof Person))
+
+    public int compareTo(Object anotherPerson) throws ClassCastException {if (!(anotherPerson instanceof Person))
         throw new ClassCastException("A person object expected");
-        int anotherPersonAge;
-        anotherPersonAge = Person(anotherPerson).getAge();
-        return this.age - anotherPersonAge;*/
-    }
+        int anotherPersonAge = ((Person)anotherPerson).getAge();
+        return this.age - anotherPersonAge;
+    }}
